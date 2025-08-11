@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Sprite Adventures</title>
+
+  <meta name="description" content="Follow a little robot on its adventure to reach the Robot Sanctuary, but all is not as it seems.">
+
+  <meta property="og:title" content="Robot Sprite Adventure">
+  <meta property="og:description" content="Help the little robot on its advennture to find the robot sanctuary, but everything is not as iit seems...">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="pexels-lenin-estrada-117221-2103864.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://example.com/robotspriteadventure">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Robot Sprite Adventures">
+  <meta name="twitter:description" content="Help a little robot on adventure to find the sanctuary, but everything is not as it seems.">
+  <meta name="twitter:image" content="pexels-lenin-estrada-117221-2103864.jpg">
+
+  <!-- Facebook card -->
+   <meta name="facebook:card" content="summary_large_image">
+   <meta name="facebook:title" content="Robot Sprite Adventures">
+   <meta name="facebook:description" content="Help a littel robot on an adventure to find the sanctuary, but everything is not as it seems.">
+   <meta name="facebook:image" content="pexels-lenin-estrada-117221-2103864.jpg">
+
+   <!-- Instagram Card -->
+   <meta name="instagram:card" content="summary_large_image">
+   <meta name="instagram:title" content="Robot Sprite Adventures">
+   <meta name="instagram:description" content="Help a little robot on an adventure to find the sanctuary, but everyrhing is not as it seems.">
+   <meta name="instagram:image" content="pexels-lenin-estrada-117221-2103864.jpg">
+
+  <link rel="icon" href="/favicon.ico"> 
+  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #3498db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg);}
+        100% { -webkit-transform: rotate(360deg);}
+      }
+      @keyframes spin {
+        0% {transform: rotate(0deg); }
+        100% {transform: rotate(360deg); }
+      }
+      .animation-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s;
+      }
+      @-webkit-keyframes animatebottom {
+        from {bottom: -100px; opacity: 0}
+        to { bottom:0; opacity:1 }
+      }
+      @keyframes animatebottom {
+        from{ bottom:-100px; opacity:0 }
+        to{ bottom:0; opacity:1 }
+      }
+      #myDiv {
+        display: none;
+        text-align: center;
+      }
+    </style>
+
+    <style>
+      p {
+        line-height: 2.0
+      }
+    </style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+  <div id="loader"></div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+  </div>
+
+  <script>
+    var myVar;
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+  <header>
+    <h1>Robot Sprite Adventure</h1>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- START MENU: user presses Start to begin the story -->
+    <section id="menu" aria-label="Main menu">
+      <p>Our little robot dreams of finding the robot sanctuary. The world looks bright... until it doesn't.</p>
+      <p><strong>How to play:</strong> <br> Use ← → to move and ↑ or Space to jump. Reach the end to complete the journey.</p>
+      <button id="startBtn">Start Game</button>
+    </section>
+    <main>
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="player">HEH</td>
+                    <td>9999</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="player">EMILY</td>
+                    <td>8760</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="player">ZAINAP</td>
+                    <td>7780</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="player">CASSIUS_M</td>
+                    <td>6543</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Learn how to create a responsive table for rankings -->
+    </main>
+    </div>
+
+   <!-- <div id="canvas-wrap">
+      <div id="loading" aria-hidden="false">
+        <strong>Loading…</strong>
+        <div id="progress">0%</div>
+      </div> -->
+    
+      <div id="overlay-ui" aria-hidden="true"></div>
+
+   <!-- </div>
+    <script src="assets/css/loading.js"></script> -->
+  </main>
+<!--decide on game name to put into the cpoyright-->
+<footer>
+        &copy; <span id="year"></span> Dark.Net Syndicate
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

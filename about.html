@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Developers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+      p {
+        line-height: 2.0;
+        text-align: center;
+        display: block;
+        margin: 1em 0;
+      }
+    </style>
+    
+
+</head>
+<body>
+    <header class="site-header">
+        <h1> WONK-i</h1>
+    </header>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+        </nav>
+    
+<main id="main">
+    <section>
+      <h2>About The Developers</h2>
+        <p><i>Because code doesn't write itself... yet.</i> </p>
+        <h3><u>Who are we?</u></h3>
+        <p>We're the humans behind the digital curtain.<br>
+        Part coffee addict, part layer lord, part "where did that bug come from?". </p>
+        <h3><u>Our Mission</u></h3>
+        <p>To learn to code websites and games so smooth, you could butter toast with them and to create digital art our users will never forget.</p>
+        <h3><u>Our Process</u></h3>
+        <style>
+            ol, ul {
+                padding-left: 0;
+                text-align: center;
+            }
+            ol li, ul li {
+                display: inline-block;
+                text-align: left; /* not sure here */
+                margin: 0 10px;
+            }
+        </style>
+        <ol>
+            <li>Think: 10%</li>
+            <li>Google: 40%</li>
+            <li>Panic: 5%</li>
+            <li>Code: 35%</li>
+            <li>Victory Dance: 10%</li>
+        </ol>
+        <h3><u>Fun Facts</u></h3>
+        <ul>
+            <li>We measure time in "just one more line"</li>
+            <li>We have emotional support tabs </li>
+            <li>Semicolons are optional (and dangerous)</li>
+            <li>Once spent 3 hours fixing a bug that  turned out <br>to be a missing semicolon. We don't talk about it, ok?</li>
+        </ul>
+
+        <h3><u>Final Word</u></h3>
+        <p>If you like what you see, high-five your screen. If somethings broken... uh... it's a <i>feature.</i></p>
+    </section>
+</main>
+
+    <footer>
+        &copy; <span id="year"></span> Dark.Net Syndicate
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
